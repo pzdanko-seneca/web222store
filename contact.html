@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WEB222 Store - Contact</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <img src="images/logo.png" alt="logo" />
+      <div class="titles">
+        <h1>The Web Programming Principles Webstore</h1>
+        <h4>The webstore for the now fully "Opt-in" web222 course.</h4>
+      </div>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+    <div class="contactMain">
+      <div class="contactInfo">
+        <h2>Contact us!</h2>
+        <h4>Fill out the information before to contact us.</h4>
+        <br />
+        <form action="https://httpbin.org/post" method="post">
+          <label for="firstName">First Name: </label>
+          <input id="firstName" type="text" name="firstName" />
+          <br />
+          <label for="lastName">Last Name: </label>
+          <input id="lastName" type="text" name="lastName" />
+          <br />
+          <label for="email">Email: </label>
+          <input id="email" type="email" name="email" />
+          <br />
+          <label for="address">Address: </label>
+          <input id="address" type="text" name="address" />
+          <br />
+          <label for="city">City: </label>
+          <input id="city" type="text" list="majorCities" name="city" autocomplete="on" />
+          <datalist id="majorCities">
+            <option label="Calgary" value="Calgary"></option>
+            <option label="Charlottetown" value="Charlottetown"></option>
+            <option label="Edmonton" value="Edmonton"></option>
+            <option label="Fredericton" value="Fredericton"></option>
+            <option label="Halifax" value="Halifax"></option>
+            <option label="Iqualuit" value="Iqualuit"></option>
+            <option label="Montreal" value="Montreal"></option>
+            <option label="Ottawa" value="Ottawa"></option>
+            <option label="Quebec City" value="Quebec City"></option>
+            <option label="St. John's" value="St. John's"></option>
+            <option label="Toronto" value="Toronto"></option>
+            <option label="Vancouver" value="Vancouver"></option>
+            <option label="Victoria" value="Victoria"></option>
+            <option label="Whitehorse" value="Whitehorse"></option>
+            <option label="Winnipeg" value="Winnipeg"></option>
+            <option label="Yellowknife" value="Yellowknife"></option>
+          </datalist>
+          <br />
+          <label for="phoneNumber">Phone Number: </label>
+          <input
+            id="phoneNumber"
+            type="tel"
+            name="phoneNumber"
+            placeholder="123-456-7890"
+            required
+            pattern="^[0-9][0-9][0-9]*[0-9][0-9][0-9]*[0-9][0-9][0-9][0-9]$"
+          />
+          <br />
+          <label for="postalCode">Postal Code: </label>
+          <input
+            id="postalCode"
+            type="text"
+            name="postalCode"
+            placeholder="A1B 2C3"
+            required
+            pattern="^[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]$"
+          />
+          <br />
+          <p>Would you like to be phoned?</p>
+          <input type="radio" name="callPhone" value="Yes" />Yes
+          <input type="radio" name="callPhone" value="No" />No
+          <p>Reason for contacting:</p>
+          <input type="radio" name="message" value="question" onclick="hideON()" />Question
+          <input type="radio" name="message" value="comment" onclick="hideON()" />Comment
+          <input type="radio" name="message" value="orderProblem" onclick="displayON()" />Order
+          Problem
+          <div id="orderNumber">
+            <label for="orderNum">Order Number: </label>
+            <input id="orderNum" type="text" name="orderNum" />
+          </div>
+          <div id="message">
+            <textarea name="customerMessage" placeholder="Write your message here"></textarea>
+            <input class="myName" name="studentName" value="Pat Zdanko" />
+          </div>
+          <input class="submission" type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <h4>2020 Web 222 store</h4>
+      <form action="https://formspree.io/myydewry" method="POST">
+        <input type="email" name="_replyto" placeholder="email" />
+        <input type="submit" value="Subscribe" />
+      </form>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
